@@ -1,4 +1,4 @@
-data "terraform_remote_state" "management" {
+data "terraform_remote_state" "vpc" {
   backend = "s3"
   config {
     bucket = "b51-tf-remote-state-bucket-afs"
