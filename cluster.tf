@@ -9,7 +9,7 @@ resource "aws_docdb_cluster" "docdb" {
 }
 
 
-resource "aws_db_subnet_group" "default" {
+resource "aws_docdb_subnet_group" "docdb" {
   name       = "roboshop-docdb-${var.ENV}"
   subnet_ids =  data.terraform_remote_state.vpc.outputs.PRIVATE_SUBNET_ID
 
