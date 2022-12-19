@@ -19,7 +19,7 @@ resource "aws_docdb_subnet_group" "docdb" {
 }
 
 
-Creates the nodes needed for the created DOCDB Cluster
+# Creates the nodes needed for the created DOCDB Cluster
 resource "aws_docdb_cluster_instance" "cluster_instances" {
   count              = 1
   identifier         = "roboshop-docdb-${var.ENV}"
