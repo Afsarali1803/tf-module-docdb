@@ -11,8 +11,9 @@ command = <<EOF
   wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
   unzip -o mongodb.zip 
   cd mongodb-main 
-  mongo --ssl --host ${aws_docdb_cluster.docdb.endpoint}:27017 --sslCAFile /tmp/rds-combined-ca-bundle.pem --username admin1 --password roboshop1 < catalogue.js
-  mongo --ssl --host ${aws_docdb_cluster.docdb.endpoint}:27017 --sslCAFile /tmp/rds-combined-ca-bundle.pem --username admin1 --password roboshop1 < users.js
+  mongo --ssl --host roboshop-docdb-dev.c2llauqxrhz1.us-east-1.docdb.amazonaws.com:27017 --sslCAFile /tmp/rds-combined-ca-bundle.pem --username admin1 --password roboshop1 < catalogue.js
+  mongo --ssl --host roboshop-docdb-dev.c2llauqxrhz1.us-east-1.docdb.amazonaws.com:27017 --sslCAFile /tmp/rds-combined-ca-bundle.pem --username admin1 --password roboshop1 < users.js
 EOF   
   }
 }
+
